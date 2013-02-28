@@ -1,0 +1,28 @@
+Git Modeline
+============
+
+This is a vim plugin which reads modelines from the git config and sets it to
+the current buffer.
+To set a modeline in the git config you can do it with the following command:
+
+  git config --add vim.modeline "tabstop=8 shiftwidth=8 noexpandtab cindent"
+
+The allowed modelines are defined in a variable and can be overwritten and
+extended by setting the following in your .vimrc:
+
+  let g:git_modeline_allowed_items = [
+              \ "textwidth",   "tw",
+              \ "softtabstop", "sts",
+              \ "tabstop",     "ts",
+              \ "shiftwidth",  "sw",
+              \ "expandtab",   "et",   "noexpandtab", "noet",
+              \ "filetype",    "ft",
+              \ "foldmethod",  "fdm",
+              \ "readonly",    "ro",   "noreadonly", "noro",
+              \ "rightleft",   "rl",   "norightleft", "norl",
+              \ "cindent",     "cin",  "nocindent", "nocin",
+              \ "smartindent", "si",   "nosmartindent", "nosi",
+              \ "autoindent",  "ai",   "noautoindent", "noai",
+              \ "spell",
+              \ "spelllang"
+              \ ]
