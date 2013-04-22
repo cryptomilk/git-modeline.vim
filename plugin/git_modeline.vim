@@ -74,5 +74,5 @@ endfun
 
 aug GitConfigModelines
     autocmd!
-    autocmd BufRead,StdinReadPost * :call <SID>GitConfigModeline()
+    autocmd BufNewFile,BufRead,StdinReadPost * :call <SID>GitConfigModeline()
 aug END
