@@ -12,8 +12,8 @@ define a vim.modeline.<FT> git config entry.
 
 Example, C indented with 4 spaces, but Makefile with 8 space tabs:
 
-  git config --add vim.modeline.c "ts=4 sw=4 et"
-  git config --add vim.modeline.make "ts=8 sw=8 noet"
+  git config --add vim.modeline-c "ts=4 sw=4 et"
+  git config --add vim.modeline-make "ts=8 sw=8 noet"
 
 If no filetype specific entry can be found it will use the default modeline.
 
