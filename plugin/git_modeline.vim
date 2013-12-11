@@ -68,13 +68,25 @@ endfun
 fun! <SID>GitConfigModeline() abort
     let git_config_modeline = system("git config --get vim.modeline-" . &ft)
 
-    if strlen(git_config_modeline)
+    if strlen(git_config_modeline) > 0
+        if g:git_modeline_verbose
+            echohl WarningMsg
+            echo "Filetype(" . &ft . ") git modeline: " . git_config_modeline
+            echohl None
+        endif
+
         call <SID>DoSetModeline(git_config_modeline)
         return
     endif
 
     let git_config_modeline = system("git config --get vim.modeline")
-    if strlen(git_config_modeline)
+    if strlen(git_config_modeline) > 0
+        if g:git_modeline_verbose
+            echohl WarningMsg
+            echo "git modeline: " . git_config_modeline
+            echohl None
+        endif
+
         call <SID>DoSetModeline(git_config_modeline)
     endif
 endfun
