@@ -3,6 +3,9 @@ git-modeline.vim
 
 Vim plugin reading modelines from the git config
 
+**This project is no longer maintained, use [https://editorconfig.org](editorconfig)**
+
+
 Configuration
 -------------
 
